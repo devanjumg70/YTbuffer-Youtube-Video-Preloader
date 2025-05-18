@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "YouTube Force Buffer",
   "version": "1.0.0",
-  "description": "Forces complete video buffering on YouTube videos",
+  "description": "Forces complete video buffering on YouTube videos and Shorts",
   "permissions": ["storage"],
   "host_permissions": ["*://*.youtube.com/*"],
   "background": {
