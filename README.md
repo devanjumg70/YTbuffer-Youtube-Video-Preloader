@@ -1,6 +1,10 @@
-# YouTube Force Buffer
+# YTbuffer-Youtube-Video-Preloader aka YouTube Force Buffer Extension 
 
 ## Overview
+TL;DR
+
+" This Chrome Extension makes YouTube videos load fully in advance — like how it used to work years ago. It helps you watch videos without annoying pauses or buffering, even if your internet is slow or unstable. Just install it, and enjoy smoother, uninterrupted playback automatically. "
+
 YouTube Force Buffer is a browser extension that forces YouTube videos and Shorts to buffer completely, allowing smooth playback without interruptions. It works by intelligently seeking through the video to trigger YouTube's buffering system while avoiding detection by YouTube's anti-buffer measures.
 
 ## Features
