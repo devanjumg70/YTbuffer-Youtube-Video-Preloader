@@ -3,7 +3,7 @@
 ## Overview
 TL;DR
 
-" This Chrome Extension makes YouTube videos load fully in advance — like how it used to work years ago. It helps you watch videos without annoying pauses or buffering, even if your internet is slow or unstable. Just install it, and enjoy smoother, uninterrupted playback automatically. "
+" This Chrome Extension makes YouTube videos load fully in advance, like how it used to work years ago. It helps you watch videos without annoying pauses or buffering, even if your internet is slow or unstable. Just install it, and enjoy smoother, uninterrupted playback automatically. "
 
 YouTube Force Buffer is a browser extension that forces YouTube videos and Shorts to buffer completely, allowing smooth playback without interruptions. It works by intelligently seeking through the video to trigger YouTube's buffering system while avoiding detection by YouTube's anti-buffer measures.
 
@@ -77,7 +77,7 @@ Forcing videos to buffer completely may use more bandwidth and system resources 
 - Ensure the extension is enabled
 - Try refreshing the YouTube page
 - Check the console for error messages
-- Make sure you're on a YouTube video or Shorts page
+- Make sure you're on a YouTube video or a Shorts page
 
 ### Buffering Stops or Fails
 - The video might already be fully buffered
@@ -100,7 +100,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Disclaimer
+## Disclaimer () This is just to let you know, no special issues!
 This extension is for educational and personal use only. Use at your own risk. The developers are not responsible for any issues that may arise from using this extension, including but not limited to increased bandwidth usage, potential YouTube Terms of Service violations, or any adverse effects on your YouTube account or experience.
 
 ## Acknowledgments
@@ -109,4 +109,4 @@ This extension is for educational and personal use only. Use at your own risk. T
 
 ---
 
-Made with ❤️ for uninterrupted viewing experiences
+Made with ❤️ by @anjumg70 @devanjumg70 for uninterrupted viewing experiences
