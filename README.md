@@ -1,73 +1,108 @@
-# Welcome to your Lovable project
+# YouTube Force Buffer
 
-## Project info
+## Overview
+YouTube Force Buffer is a browser extension that forces YouTube videos and Shorts to buffer completely, allowing smooth playback without interruptions. It works by intelligently seeking through the video to trigger YouTube's buffering system while avoiding detection by YouTube's anti-buffer measures.
 
-**URL**: https://lovable.dev/projects/26360616-c553-4938-a8fd-d125185732f7
+## Features
+- **Complete Video Buffering**: Forces videos to buffer entirely regardless of YouTube's default behavior
+- **Shorts Support**: Works with both regular YouTube videos and YouTube Shorts
+- **Quality Change Detection**: Automatically detects and handles video quality changes
+- **Adaptive Buffering**: Adjusts buffering strategy based on video length, connection speed, and buffering success
+- **Detailed Logging**: Comprehensive console logging for monitoring buffering progress
+- **Maximum Compatibility**: Works with various YouTube player states and configurations
 
-## How can I edit this code?
+## How It Works
+The extension uses advanced techniques to overcome YouTube's built-in limits on video buffering:
 
-There are several ways of editing your application.
+1. **Smart Detection**: Identifies when you're viewing YouTube videos or Shorts
+2. **Adaptive Seeking**: Intelligently seeks ahead in the video to trigger buffering
+3. **Progress Monitoring**: Continuously monitors buffering progress and adjusts strategy
+4. **Quality Tracking**: Detects quality changes and adapts the buffering process accordingly
+5. **Connection Optimization**: Adjusts buffering strategy based on your connection speed
 
-**Use Lovable**
+## Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/26360616-c553-4938-a8fd-d125185732f7) and start prompting.
+### From Chrome Web Store
+*Coming soon!*
 
-Changes made via Lovable will be committed automatically to this repo.
+### Manual Installation
+1. Download or clone this repository
+2. Open Chrome/Edge/Brave and navigate to `chrome://extensions/`
+3. Enable "Developer Mode" (toggle in the top right)
+4. Click "Load Unpacked" and select the extension folder
+5. The extension will now be active on YouTube
 
-**Use your preferred IDE**
+## Usage
+Simply navigate to any YouTube video or Shorts page. The extension works automatically in the background - no configuration needed!
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+You can monitor the extension's activity in your browser's developer console:
+1. Right-click on the YouTube page and select "Inspect" or press F12
+2. Go to the "Console" tab
+3. Look for messages with the prefix `[YT Force Buffer]`
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Configuration
+The extension uses smart defaults, but you can modify its behavior by editing the `config` object in `content.js`:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```javascript
+const config = {
+  checkInterval: 1000,           // How often to check buffer status (ms)
+  shortVideoThreshold: 300,      // Videos under this length are considered short
+  adaptiveSeekMinimum: 5,        // Minimum seek step size (seconds)
+  adaptiveSeekMaximum: 60,       // Maximum seek step size (seconds)
+  shortsSeekStepSize: 5,         // Seek step size for Shorts (seconds)
+  maxSeekAttempts: 500,          // Maximum seek attempts
+  debugMode: true,               // Enable console logging
+  // ... other options
+};
 ```
 
-**Edit a file directly in GitHub**
+## Limitations
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### YouTube Updates
+YouTube regularly updates its player, which may affect the extension's functionality. If YouTube changes its buffering mechanism or player structure, an update may be required.
 
-**Use GitHub Codespaces**
+### Browser Compatibility
+This extension is designed for Chromium-based browsers (Chrome, Edge, Brave, etc.). It may not work with Firefox or other browsers.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Performance Impact
+Forcing videos to buffer completely may use more bandwidth and system resources than YouTube's default behavior.
 
-## What technologies are used for this project?
+## Troubleshooting
 
-This project is built with:
+### Extension Not Working
+- Ensure the extension is enabled
+- Try refreshing the YouTube page
+- Check the console for error messages
+- Make sure you're on a YouTube video or Shorts page
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Buffering Stops or Fails
+- The video might already be fully buffered
+- YouTube may be limiting buffering for your connection
+- Try refreshing the page and allowing the extension to restart
 
-## How can I deploy this project?
+### High CPU Usage
+- Reduce the `checkInterval` value in the configuration
+- Disable other extensions that might be interacting with YouTube
 
-Simply open [Lovable](https://lovable.dev/projects/26360616-c553-4938-a8fd-d125185732f7) and click on Share -> Publish.
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Can I connect a custom domain to my Lovable project?
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Yes, you can!
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Disclaimer
+This extension is for educational and personal use only. Use at your own risk. The developers are not responsible for any issues that may arise from using this extension, including but not limited to increased bandwidth usage, potential YouTube Terms of Service violations, or any adverse effects on your YouTube account or experience.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Acknowledgments
+- Thanks to all contributors and users who provide feedback
+- This project is not affiliated with or endorsed by YouTube or Google
+
+---
+
+Made with ❤️ for uninterrupted viewing experiences
